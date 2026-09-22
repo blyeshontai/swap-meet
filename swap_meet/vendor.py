@@ -37,6 +37,17 @@ class Vendor:
 
         return None
 
-        
+    def get_by_id(self, id):
+        for item in self.inventory:
+            if item.id == id:
+                return item
+        return None
 
-        
+
+'''
+---WAVE 2---
+- Instances of `Vendor` have an instance method named `get_by_id`
+- This method takes one argument: an integer, representing an `Item`'s `id`
+- This method returns the item with a matching `id` from the inventory
+- If there is no matching item in the `inventory`, the method should explicitly return `None`
+'''
