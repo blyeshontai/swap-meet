@@ -4,22 +4,29 @@ Talk through each section with your partner. Add notes on what you discussed and
 
 ## Accessibility Needs
 *What does each team member need access to in order to succeed and show up the best they can?*
+- Need some time to understand what the code is doing (sb)
 
 ## Collaboration vs. Individual Work Expectations
 *Clarify your collaboration expectations - does your group want to write code together all of the time? Or divide work to do independently, then come together to share accomplishments? What tools and technologies can help your collaboration?*
 
+- Day 1: Work on wave 1 together
+
 ## Learning Style
 *How does each team member learn best in project settings?*
 
+- Learn by doing research (sb)
+
 ## Preferred Feedback Style
 *How does each team member best receive feedback?*
+- Best to receive straight forward feedback (sb)
 
 ## One Team Communication Skill to Improve
 *What is a teamwork-related skill you want to work on?*
+- Would like to work on open communication (sb)
 
 ## Optional: Other agreements
 *Other co-working agreements that were not captured in the above sections.*
 
 ## Signatures
-______________ _______________
-Date: _________
+_____Shontai Blye_    ___Zarema Kharachyk____________
+Date: ___09/21/2026______
