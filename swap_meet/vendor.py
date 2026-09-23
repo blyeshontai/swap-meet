@@ -43,11 +43,35 @@ class Vendor:
                 return item
         return None
 
+    def swap_items(self, other_vendor, my_item, their_item):
+        if my_item not in self.inventory:
+            return False
 
-'''
----WAVE 2---
-- Instances of `Vendor` have an instance method named `get_by_id`
-- This method takes one argument: an integer, representing an `Item`'s `id`
-- This method returns the item with a matching `id` from the inventory
-- If there is no matching item in the `inventory`, the method should explicitly return `None`
-'''
+        if their_item not in other_vendor.inventory:
+            return False
+
+        self.remove(my_item)
+        other_vendor.add(my_item)
+
+        other_vendor.remove(their_item)
+        self.add(their_item)
+
+        return True
+
+
+
+
+
+"""
+Instances of `Vendor` have an instance method named `swap_items`
+- It takes 3 arguments:
+- `swap_items` takes 3 arguments:
+    1. an instance of another `Vendor` (`other_vendor`), representing the friend that the vendor is swapping with
+    2. an instance of an `Item` (`my_item`), representing the item this `Vendor` instance plans to give
+    3. an instance of an `Item` (`their_item`), representing the item the friend `Vendor` plans to give
+  - The method removes `my_item` from this `Vendor`'s inventory, and adds it to the friend's inventory
+  - The method removes `their_item` from the other `Vendor`'s inventory, and adds it to this `Vendor`'s inventory
+  - The method returns `True`
+  - If this `Vendor`'s inventory doesn't contain `my_item` or the friend's inventory doesn't contain `their_item`, the method returns `False`
+
+"""
