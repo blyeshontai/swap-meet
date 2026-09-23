@@ -1,23 +1,4 @@
-'''
-### Wave 1
 
-In Wave 1 we will create the `Vendor` class.
-
-* There is a module (file) named `vendor.py` inside of the `swap_meet` package (folder)
-* Inside this module, there is a class named `Vendor`
-* Each `Vendor` will have an attribute named `inventory`, which is an empty list by default
-* When we instantiate an instance of `Vendor`, we can optionally pass in a list with the keyword argument `inventory`
-
-
-- Every instance of `Vendor` has an instance method named `add`, which takes in one item
-- This method adds the item to the `inventory`
-- This method returns the item that was added
-
-- Similarly, every instance of `Vendor` has an instance method named `remove`, which takes in one item
-- This method removes the matching item from the `inventory`
-- This method returns the item that was removed
-- If there is no matching item in the `inventory`, the method should return `None`
-'''
 class Vendor:
 
     def __init__(self, inventory=None):
@@ -70,5 +51,35 @@ class Vendor:
 
         return self.swap_items(other_vendor, my_item, their_item)
 
+    #get by category
+    def get_by_category(self, category):
+        matching_items = []
+        #loop through inventory for matches
+        for item in self.inventory:
+            if item.get_category() == category:
+                matching_items.append(item)
+        return matching_items
 
+    #get by best category
+    def get_best_by_category(self, category):
+        #get matching items
+        matching_items = self.get_by_category(category)
+        #what to do if no matching items
+        if not matching_items:
+            return None
 
+        best_item = matching_items[0]
+
+        for item in matching_items[1:]:
+            if item.condition > best_item.condition:
+                best_item = item
+        return best_item
+
+    def swap_best_by_category(self, other_vendor, my_priority, their_priority):
+        my_item = self.get_best_by_category(their_priority)
+        their_item = other_vendor.get_best_by_category(my_priority)
+
+        if my_item is None or their_item is None:
+            return False
+        else:
+            return self.swap_items(other_vendor, my_item, their_item)
