@@ -2,12 +2,16 @@ from swap_meet.item import Item
 
 class Electronics(Item):
 
-    def __init__(self, type="Unknown", condition=0, id=None):
-        Item.__init__(self, id=id, condition=condition)
-        self.type = type
+    # def __init__(self, type="Unknown", condition=0, id=None):
+    #     Item.__init__(self, id=id, condition=condition)
+    #     self.type = type
 
-    def get_category(self):
-        return "Electronics"
+    def __init__(self, type="Unknown", condition=0, id=None):
+            super().__init__(id=id, condition=condition)
+            self.type = type
+
+    # def get_category(self):
+    #     return "Electronics"
 
     def __str__(self):
         return f"An object of type Electronics with id {self.id}. This is a {self.type} device."

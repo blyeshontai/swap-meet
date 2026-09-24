@@ -317,7 +317,7 @@ def test_swap_best_by_category_no_other_match_is_false():
 
     assert not result
     assert len(tai.inventory) == 3
-    assert len(tai.inventory) == 3
+    assert len(jesse.inventory) == 3
 
     assert item_a in tai.inventory
     assert item_b in tai.inventory

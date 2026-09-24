@@ -81,5 +81,5 @@ class Vendor:
 
         if my_item is None or their_item is None:
             return False
-        else:
-            return self.swap_items(other_vendor, my_item, their_item)
+        #else:
+        return self.swap_items(other_vendor, my_item, their_item)
